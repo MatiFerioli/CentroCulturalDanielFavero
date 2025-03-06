@@ -1,0 +1,14 @@
+@use 'variables' as *;
+
+@mixin button ($primary-color, $background-color) {
+  background: $background-color;
+  color: $primary-color;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  &:hover {
+    background: darken(map-get($colors, background-color), 10%);
+  }
+}

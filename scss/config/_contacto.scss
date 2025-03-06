@@ -1,0 +1,122 @@
+@use "variables" as *;
+
+// Estilos específicos para la página de contacto
+.contacto-section {
+  margin-top: $spacing-xl + 1.25em; // Espacio para el header fijo
+  padding: $spacing-md;
+  h1 {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+  h2 {
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-xs;
+    border-bottom: 2px solid map-get($colors, primary-color);
+  }
+}
+.footer-contact {
+  background-color: map-get($colors, light-color);
+  padding: $spacing-md;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: $spacing-lg; 
+  h3 {
+    margin-bottom: $spacing-md;
+    color:map-get($colors, primary-color);
+  }
+  p {
+    margin-bottom: $spacing-sm; 
+    &:last-child {
+      margin-bottom: 0;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+}
+// Formulario de contacto
+.contact-form {
+  background-color: map-get($colors, light-color);
+  padding: $spacing-lg;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: $spacing-lg; 
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -#{$spacing-sm};    
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+    }
+  }
+  .form-group {
+    flex: 1;
+    padding: 0 $spacing-sm;
+    margin-bottom: $spacing-md; 
+    @media (max-width: $breakpoint-sm) {
+      flex: 0 0 100%;
+    }
+  }
+  label {
+    display: block;
+    margin-bottom: $spacing-xs;
+    font-weight: 500;
+  }
+  .form-control {
+    width: 100%;
+    padding: $spacing-sm;
+    border: 1px solid map-get($colors, border-color);
+    border-radius: $border-radius;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+    &:focus {
+      border-color: map-get($colors, primary-color);
+      box-shadow: 0 0 0 2px rgba(map-get($colors, primary-color), 0.2);
+      outline: none;
+    }
+  }
+  textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+  }
+  .input-group {
+    display: flex; 
+    .input-group-prepend {
+      display: flex;
+      align-items: center;
+      .input-group-text {
+        padding: $spacing-sm;
+        background-color: map-get($colors, background-color);
+        border: 1px solid map-get($colors, border-color);
+        border-right: none;
+        border-radius: $border-radius 0 0 $border-radius;
+      }
+    }
+    .form-control {
+      border-radius: 0 $border-radius $border-radius 0;
+    }
+  }
+  .btn {
+    padding: $spacing-sm $spacing-lg;
+    background-color: map-get($colors, primary-color);
+    color: map-get($colors, light-color);
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-weight: bold;
+    transition: map-get($colors, background-color) 0.3s ease; 
+    &:hover {
+      background-color: darken(map-get($colors, background-color), 10%);
+    }
+  }
+}
+// Mapa
+.map-container {
+  margin-bottom: $spacing-lg; 
+  .map-iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
