@@ -26,7 +26,7 @@ El Centro Cultural Daniel Favero es un espacio comunitario que ofrece una varied
 
 1.  Clona el repositorio:
 
-    git clone [https://github.com/MatiFerioli/Centro-Cultural-Daniel-Favero/tree/main]
+    git clone [https://github.com/MatiFerioli/CentroCulturalDanielFavero/tree/master]
 
 2.  Compila los estilos Sass:
 
